@@ -1,0 +1,101 @@
+Loading gcc/13.2.0-gcc-8.5.0-sfeapnb
+  Loading requirement: gmp/6.2.1-gcc-8.5.0-jqpekoi mpfr/4.2.0-gcc-8.5.0-qoqvuux
+    mpc/1.3.1-gcc-8.5.0-d3tf37d zlib-ng/2.1.4-gcc-8.5.0-c5jsf5a
+    zstd/1.5.5-gcc-8.5.0-4toefmh
+Residual ||W - QR||_F / ||W||_F = 3.049720e-16
+
+
+###############################################################################
+TCHPC Cluster: seagull
+Job 39350 (TSQR_4nodes) for User 'czhang4' in Account 'mschpc'
+Finished at: Fri Feb 20 14:12:56 GMT 2026
+
+Job efficiency estimates:
+=========================
+
+
+
+Job completion status:
+======================
+
+JobID           JobName AllocCPUS NTasks NNodes     MaxRSS    MaxRSSNode  MaxDiskRead MaxDiskWrite    Elapsed      State ExitCode 
+------------ ---------- --------- ------ ------ ---------- ------------- ------------ ------------ ---------- ---------- -------- 
+39350        TSQR_4nod+         4             1                                                      00:00:00    RUNNING      0:0 
+39350.batch       batch         4      1      1                                                      00:00:00    RUNNING      0:0 
+39350.extern     extern         4      1      1                                                      00:00:00    RUNNING      0:0 
+39350.0      hydra_bst+         4      1      1    326920K  seagull-n001            0        0.00M   00:00:02  COMPLETED      0:0 
+
+
+Job details:
+============
+
+JobId=39350 JobName=TSQR_4nodes
+   UserId=czhang4(2230) GroupId=czhang4(2162) MCS_label=N/A
+   Priority=127515 Nice=0 Account=mschpc QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:02 TimeLimit=1-00:00:00 TimeMin=N/A
+   SubmitTime=2026-02-20T14:12:54 EligibleTime=2026-02-20T14:12:54
+   AccrueTime=2026-02-20T14:12:54
+   StartTime=2026-02-20T14:12:54 EndTime=2026-02-20T14:12:56 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-02-20T14:12:54 Scheduler=Main
+   Partition=compute AllocNode:Sid=seagull01:1817578
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=seagull-n001
+   BatchHost=seagull-n001
+   NumNodes=1 NumCPUs=4 NumTasks=4 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=63000M,node=1,billing=4
+   AllocTRES=cpu=4,mem=63000M,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=seagull-n001 CPU_IDs=0-1,8-9 Mem=63000 GRES=
+   MinCPUsNode=1 MinMemoryNode=63000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/home/users/mschpc/2025/czhang4/casestudy1/submit_casestudy1.sh
+   WorkDir=/home/users/mschpc/2025/czhang4/casestudy1
+   StdErr=/home/users/mschpc/2025/czhang4/casestudy1/./casestudy1.err
+   StdIn=/dev/null
+   StdOut=/home/users/mschpc/2025/czhang4/casestudy1/./casestudy1.out
+   
+
+
+SLURM Bank Statement:
+=====================
+
+User           Usage |        Account     Usage | Account Limit Available (CPU hrs)
+---------- --------- + -------------- --------- + ------------- ---------
+ashech             0 |         MSCHPC        16 |        10,000     9,984
+cheny35            0 |         MSCHPC        16 |        10,000     9,984
+chojnace           0 |         MSCHPC        16 |        10,000     9,984
+czhang4            7 |         MSCHPC        16 |        10,000     9,984
+ecurry             0 |         MSCHPC        16 |        10,000     9,984
+fugu               0 |         MSCHPC        16 |        10,000     9,984
+killalel           0 |         MSCHPC        16 |        10,000     9,984
+knightsk           0 |         MSCHPC        16 |        10,000     9,984
+lanem2             5 |         MSCHPC        16 |        10,000     9,984
+mcleodco           0 |         MSCHPC        16 |        10,000     9,984
+mli7               0 |         MSCHPC        16 |        10,000     9,984
+ofarrepa           3 |         MSCHPC        16 |        10,000     9,984
+prasannp           0 |         MSCHPC        16 |        10,000     9,984
+sheriddy           0 |         MSCHPC        16 |        10,000     9,984
+srajendr           0 |         MSCHPC        16 |        10,000     9,984
+szhang2            0 |         MSCHPC        16 |        10,000     9,984
+vacariem           0 |         MSCHPC        16 |        10,000     9,984
+xiangyu            0 |         MSCHPC        16 |        10,000     9,984
+xniu               0 |         MSCHPC        16 |        10,000     9,984
+yangmi             0 |         MSCHPC        16 |        10,000     9,984
+yaoco              0 |         MSCHPC        16 |        10,000     9,984
+
+
+Acknowledgements:
+=================
+
+Note that usage of TCHPC Resources *must* be acknowledged in all publications.
+
+Please see this page for details relevant to this cluster:
+
+http://www.tchpc.tcd.ie/resources/acknowledgementpolicy
+
+################################################################################
