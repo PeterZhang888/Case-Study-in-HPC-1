@@ -121,6 +121,7 @@ How to run
 Place all files in the same MATLAB working directory and run the scripts individually:
 
 ```matlab
+Q1CG
 Q2
 Q3
 Q4
