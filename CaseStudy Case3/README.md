@@ -9,23 +9,14 @@ Submission structure
 The submission is organised as follows:
 
 - `main.m`  
-  Main MATLAB script containing the overall demonstrations and solutions for Questions 2, 3, and 4.  
-  This is the main file that should be run first.
+  Main MATLAB script containing all demonstrations and solutions for Questions 2, 3, and 4.  
+  This is the primary file to run.
 
 - `Q1CG.m`  
   MATLAB function implementing the Conjugate Gradient method.
 
 - `get_covariance_matrix.m`  
   MATLAB function for generating the symmetric positive definite Matérn covariance matrix and right-hand side vector.
-
-- `Q2.m`  
-  Script for Question 2.
-
-- `Q3.m`  
-  Script for Question 3.
-
-- `Q4.m`  
-  Script for Question 4.
 
 - `Q2_results.mat`  
   Saved numerical results for Question 2.
@@ -34,19 +25,19 @@ The submission is organised as follows:
   Saved numerical results for Question 4.
 
 - `CG_convergence_for_Matern_covariance_matrices.png`  
-  Figure produced in Question 2.
+  Figure produced for Question 2.
 
 - `CG_iterations_versus_noise_level.png`  
-  Figure produced in Question 3.
+  Figure produced for Question 3.
 
 - `Condition_number_versus_noise_level.png`  
-  Figure produced in Question 3.
+  Figure produced for Question 3.
 
 - `Residual_Comparison.png`  
-  Figure produced in Question 4.
+  Figure produced for Question 4.
 
 - `Eigenvalue_Comparison.png`  
-  Figure produced in Question 4.
+  Figure produced for Question 4.
 
 - `CG_report_Q2_Q4.tex`  
   LaTeX report discussing the numerical results for Questions 2, 3, and 4.
@@ -56,7 +47,12 @@ File descriptions
 
 1. Main script
 
-`main.m` runs the scripts for Questions 2, 3, and 4 in sequence, so that all demonstrations and numerical results can be reproduced from a single MATLAB file.
+`main.m` contains all computations and demonstrations required for Questions 2, 3, and 4.  
+It performs:
+- generation of covariance matrices
+- execution of the Conjugate Gradient method
+- computation of residuals and condition numbers
+- generation of plots and saved outputs
 
 2. Function files
 
@@ -64,49 +60,30 @@ File descriptions
 \[
 Ax = b
 \]
-using the Conjugate Gradient method, where \(A\) is symmetric positive definite. It returns:
-- the approximate solution vector
+using the Conjugate Gradient method for symmetric positive definite matrices. It returns:
+- the approximate solution
 - the residual norm history
 - the number of iterations
 
-`get_covariance_matrix.m` generates a Matérn covariance matrix \(A\) together with a random right-hand side vector \(b\), using the specified values of:
-- matrix dimension \(N\)
+`get_covariance_matrix.m` generates a Matérn covariance matrix \(A\) and a random vector \(b\), based on:
+- matrix size \(N\)
 - kernel parameter \(\tau\)
 - noise level
 
-3. Question scripts
+3. Numerical experiments
 
-`Q2.m` investigates how the dimension of the covariance matrix affects CG convergence. It uses:
-- \(\tau = 20\)
-- noise \(= 0.005\)
-- matrix sizes \(N = 512, 1024, 2048\)
+Question 2:
+- investigates the effect of matrix size on CG convergence  
+- uses \(N = 512, 1024, 2048\), \(\tau = 20\), noise \(= 0.005\)
 
-It records:
-- the number of iterations
-- the relative residual norm history
-- the final relative residual norm
+Question 3:
+- investigates the effect of noise on conditioning and convergence  
+- uses \(N = 1024\), \(\tau = 416\)  
+- varies noise from \(0.5\) to \(5 \times 10^{-9}\)
 
-`Q3.m` investigates how the noise level affects the condition number of \(A\) and the convergence of CG. It uses:
-- \(N = 1024\)
-- \(\tau = 416\) (from the last three digits of the student ID)
-
-It varies the noise level from `0.5` down to `5e-9`, and records:
-- the number of CG iterations
-- the condition number of \(A\)
-
-`Q4.m` compares the convergence of CG for the original matrix \(A\) and the transformed matrix \(A_{\text{new}}\). It uses:
-- \(N = 1024\)
-- \(\tau = 100\)
-- noise \(= 0.05\)
-
-It records:
-- iteration counts
-- condition numbers
-- final relative residual norms
-
-It also compares:
-- residual convergence
-- eigenvalue spectra
+Question 4:
+- compares CG convergence for the original matrix \(A\) and the transformed matrix \(A_{\text{new}}\)  
+- analyses residual behaviour and eigenvalue distributions
 
 How to run the code
 -------------------
@@ -118,4 +95,6 @@ How to run the code
 3. Run:
 
 ```matlab
+Q1CG
+get_covariance_matrix
 main
