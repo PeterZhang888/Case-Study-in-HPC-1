@@ -95,6 +95,4 @@ How to run the code
 3. Run:
 
 ```matlab
-Q1CG
-get_covariance_matrix
 main
