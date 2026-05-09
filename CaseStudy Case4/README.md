@@ -1,6 +1,6 @@
 # Case Study 4: Multigrid Assignment
 
-This repository contains my solution for Case Study 4: Multigrid Assignment.
+This repository contains my solution for Case Study 4: Multigrid Method.
 
 The code solves the two-dimensional Poisson problem
 
@@ -50,45 +50,3 @@ $$
 This Jupyter notebook contains the demonstration and numerical test.
 
 It imports the functions from `Poisson2D.py` and `Cycle.py`, generates a random right-hand side vector, starts from the zero initial guess, applies fewer than 15 V-cycles, records the residual norm after each cycle, and plots the convergence result.
-
-## How to Run
-
-Make sure the following three files are in the same folder:
-
-- `Poisson2D.py`
-- `Cycle.py`
-- `Test.ipynb`
-
-Open the notebook with:
-
-`jupyter notebook Test.ipynb`
-
-or:
-
-`jupyter lab Test.ipynb`
-
-Then run the cells in order.
-
-## Required Packages
-
-The code uses:
-
-- `numpy`
-- `scipy`
-- `matplotlib`
-
-They can be installed with:
-
-`pip install numpy scipy matplotlib`
-
-## Output
-
-The notebook produces a plot of the residual norm
-
-$$
-\|f - Au\|_2
-$$
-
-against the number of V-cycles.
-
-A decreasing line on the logarithmic plot shows that the multigrid V-cycle is converging.
